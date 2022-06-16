@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'trangchu/phim1.css' %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+    <div id="header">
+        <img src='http://localhost:18080/media/logo1.png' alt=''>
+        <h1>Thai Cartoon 247</h1>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="#" title="Home">Home</a></li>
+            <li><a href="#" title="Tom and jerry">Tom and jerry</a></li>
+            <li><a href="#" title="Dragon">Dragon</a></li>
+            <li><a href="#" title="Conan">Conan</a></li>
+            <li><a href="#" title="Naruto">Naruto</a></li>
+            <li><a href="#" title="Naruto">Chip and Dane</a></li>
+        </ul>
+        <button>Tìm kiếm</button>
+        <input type="search" placeholder="Search...">
+    </div>
+    <div id="banner">
+        <video width="595" height="334" autoplay="autoplay" controls="controls" preload="preload" muted="muted">
+                <source src="http://localhost:18080/media/10.mp4"></source>
+        </video>
+    </div>
+    <div id="main">
+        <div id="left">
+            <ul>
+                {% for item in page_obj %}
+                <li>
+                <a href="{{item.video.url}}" title=""><img src='{{item.image.url}}' alt=''></a>
+                <h2><a href="{{item.video.url}}" title="">{{item.title}}</a></h2>
+                </li>
+                {%  endfor %}
+                <div class="pagination">
+                    <span class="step-links">
+                        {% if page_obj.has_previous %}
+                            <a href="?page=1">&laquo; first</a>
+                            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                        {% endif %}
+
+                        <span class="current">
+                            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                        </span>
+
+                        {% if page_obj.has_next %}
+                            <a href="?page={{ page_obj.next_page_number }}">next</a>
+                            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                        {% endif %}
+                    </span>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">2022@thaicartoon247</div>
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'dangnhap1/style1.css' %}">
+<body>
+    <form action="{% url 'dangnhap:signupUser' %}" method="post">
+        {% csrf_token %}
+        <div id="login">
+            <h2><b>facebook</b></h2>
+            <input type="text" placeholder="Mobile number or email address" name ="username" >
+            <input type="password" placeholder="Password" name ="password" >
+            <button type="submit"><b>Log In</b></button>
+            <h3>English(UK)<br>中文(台灣)<br>Español<br>Français(France)</h3>
+
+        </div>
+        <div id="footer">
+            <p><small><small>About . Hlep . More</small></small></p>
+            <p><small>Meta  <sup>(c)</sup> 2022</small></p>
+        </div>
+    </form>
+</body>
+</html>
