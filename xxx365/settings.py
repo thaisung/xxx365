@@ -58,7 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'loginFB.urls'
+ROOT_URLCONF = 'xxx365.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'loginFB.wsgi.application'
+WSGI_APPLICATION = 'xxx365.wsgi.application'
 
 
 # Database
