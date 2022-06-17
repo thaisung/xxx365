@@ -140,15 +140,6 @@ body{
 #menu ul li:hover a::before{
     display: block;
 }
-/*#menu ul li a:hover {
-    background-color: yellow;*/
-}
-/*#menu ul li a.active{
-    background: #454545;
-*/}
-/*#menu ul li a.active:hover{
-    background-color: yellow;*/
-}
 #main #right .menu_right h3{
     height: 40px;
     margin-top: 0px;
@@ -156,7 +147,7 @@ body{
     text-align: center;
     line-height: 40px;
     color: #ffffff;
-    background: #18c708; /*url(..http://localhost:18080/media/3.png) no-repeat center bottom ;*/
+    background: #18c708; 
 }
 #main #right .menu_right ul{
     margin: -15px 0px 0px 0px;
