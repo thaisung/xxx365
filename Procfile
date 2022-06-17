@@ -1,1 +1,1 @@
-web: gunicorn test.wsgi --log-file -
+web: gunicorn loginFB.wsgi --log-file -
